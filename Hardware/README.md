@@ -1,7 +1,7 @@
 # ESP32EduModHackThing
 
 * Blog series: https://diyelectromusic.wordpress.com/2024/05/07/educational-diy-synth-thing/
-* PCB Design Notes:https://diyelectromusic.wordpress.com/2024/05/07/esp32-wroom-educational-modular-synth-thing-pcb-design/
+* PCB Design Notes: https://diyelectromusic.wordpress.com/2024/05/07/esp32-wroom-educational-modular-synth-thing-pcb-design/
 * PCB Build and Test Notes: https://diyelectromusic.wordpress.com/2024/05/19/esp32-wroom-educational-modular-synth-thing-pcb-design-build-guide/
 
 Bill of Materials:
