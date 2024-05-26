@@ -11,6 +11,8 @@ Work in progress.  Watch this space...
 * HardwareTestCode - contains a series of sketches that can be used to test specific elements of the board.
 * Firmware - contains the current release of the core firmware to perform all the functionss as described in the blog series.
 
+## License, Use, Feedback, Contributions
+
 Released under a MIT license.  No fitness for any purpose suggested or implied.  Use at your own risk.  I am not an electronics person - I'm just messing around.
 
 **Do not plug this into anything else and certainly not anything expensive or wanted.**
