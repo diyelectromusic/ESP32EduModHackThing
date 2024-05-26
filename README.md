@@ -1,4 +1,7 @@
 # ESP32EduModHackThing
+
+[[/images/ESP32EduModHackThing.JPG|Photo of the ESP32EduModHackThing]]
+
 ESP32 based, hacked together modular-synth like thing to help learn the basics of analog synthesis and hook up to breadboards for experimenting with circuits.
 
 * Blog series: https://diyelectromusic.wordpress.com/2024/05/07/educational-diy-synth-thing/
