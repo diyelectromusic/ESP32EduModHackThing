@@ -1,13 +1,26 @@
 # ESP32EduModHackThing
 
-[[/images/ESP32EduModHackThing.JPG|Photo of the ESP32EduModHackThing]]
+![Photo of the ESP32EduModHackThing](images/ESP32EduModHackThing.JPG)
 
 ESP32 based, hacked together modular-synth like thing to help learn the basics of analog synthesis and hook up to breadboards for experimenting with circuits.
 
 * Blog series: https://diyelectromusic.wordpress.com/2024/05/07/educational-diy-synth-thing/
-* PCB Design and Build: https://diyelectromusic.wordpress.com/2024/05/07/esp32-wroom-educational-modular-synth-thing-pcb-design/
 
 Work in progress.  Watch this space...
+
+## Hardware
+
+**Be sure to read the Errata and limitations in the design notes**
+
+Contents of the [Hardware](/Hardware) directory:
+* Main PCB - 100x100mm main PCB.
+* 24pin DIP Adaptor - small adaptor PCB as a workaround to the errata about the 24-pin DIP socket.
+* Front Panel - 100x100mm PCB files that can be used as a front panel.
+
+Note: The above does not include any connections for MIDI, audio, or power.  See the build notes for details.
+
+* PCB Design Notes: https://diyelectromusic.wordpress.com/2024/05/07/esp32-wroom-educational-modular-synth-thing-pcb-design/
+* PCB Build and Test Notes: https://diyelectromusic.wordpress.com/2024/05/19/esp32-wroom-educational-modular-synth-thing-pcb-design-build-guide/
 
 ## Code Directories
 
