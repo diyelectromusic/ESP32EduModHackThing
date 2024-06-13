@@ -19,6 +19,13 @@ Contents of the [Hardware](/Hardware) directory:
 
 Note: The above does not include any connections for MIDI, audio, or power.  See the build notes for details.
 
+Additional hardware (optional):
+* Connector Panel - 50x100mm PCB files that can be used as an additional accessories/connectors panel.
+* 3D Printer STL file - 150x100x35mm approx enclosure for a front panel and connector panel.
+
+![Photo of the ESP32EduModHackThing in its box](images/ESP32EduModHackThingBox.JPG)
+
+Main PCB:
 * PCB Design Notes: https://diyelectromusic.wordpress.com/2024/05/07/esp32-wroom-educational-modular-synth-thing-pcb-design/
 * PCB Build and Test Notes: https://diyelectromusic.wordpress.com/2024/05/19/esp32-wroom-educational-modular-synth-thing-pcb-design-build-guide/
 
