@@ -38,6 +38,8 @@ Errata:
 This repository also contains:
 * 24-pin DIP narrow to wide adaptor.
 * Front panel design.
+* Connector panel design.
+* STL file for a 3D Printed box for both panels.
 
 If you like what you see, you can buy me a Ko-Fi - https://ko-fi.com/diyelectromusic
 
