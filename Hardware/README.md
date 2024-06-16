@@ -40,6 +40,7 @@ This repository also contains:
 * Front panel design.
 * Connector panel design.
 * STL file for a 3D Printed box for both panels.
+* STL file for a 3D Printed tool to help screw in spacers.
 
 If you like what you see, you can buy me a Ko-Fi - https://ko-fi.com/diyelectromusic
 

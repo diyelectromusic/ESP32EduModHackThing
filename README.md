@@ -22,6 +22,7 @@ Note: The above does not include any connections for MIDI, audio, or power.  See
 Additional hardware (optional):
 * Connector Panel - 50x100mm PCB files that can be used as an additional accessories/connectors panel.
 * 3D Printer STL file - 150x100x35mm approx enclosure for a front panel and connector panel.
+* 3D Printer STL file for a low quality tool to help screw in the hex-spacers.
 
 ![Photo of the ESP32EduModHackThing in its box](images/ESP32EduModHackThingBox.JPG)
 
