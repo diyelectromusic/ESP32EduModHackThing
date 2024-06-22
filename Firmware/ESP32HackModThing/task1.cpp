@@ -323,11 +323,12 @@ void Task1Setup(void)
 }
 
 #define S_MUX (NUM_MUX_POTS-1)
-#define S_FASTIO (S_MUX+1)
-#define S_DIGIO  (S_FASTIO+1)
+#define S_DIGIO  (S_MUX+1)
 #define S_ALGIO  (S_DIGIO+1)
-#define S_MIDI   (S_ALGIO+1)
-#define S_LAST   (S_MIDI+1)
+#define S_LAST   (S_ALGIO+1)
+// Not scanning following in the sequence atm - scanning every loop instead
+#define S_FASTIO (S_ALGIO+1)
+#define S_MIDI   (S_FASTIO+1)
 int taskState;
 int timingtog1;
 void Task1Loop(void)
@@ -344,6 +345,10 @@ void Task1Loop(void)
     digitalWrite(TIMING_PIN2, HIGH);
 #endif
 #endif
+
+  // Fast/Analog inputs and MIDI scanned every time
+  Task1FastAlgIOLoop();
+  Task1MIDILoop();
 
   if (taskState <= S_MUX) {
     // Read each MUX pot in turn
