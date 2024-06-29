@@ -6,7 +6,11 @@ ESP32 based, hacked together modular-synth like thing to help learn the basics o
 
 * Blog series: https://diyelectromusic.wordpress.com/2024/05/07/educational-diy-synth-thing/
 
-Work in progress.  Watch this space...
+## Getting Started
+
+Once the hardware is ready (see below) here are some links to get started:
+* One-sheet Getting Started Guide: [Download Here](Docs/EduModSynthThing-GettingStarted.pdf).
+* Some first experiments: https://diyelectromusic.com/2024/06/17/educational-diy-synth-thing-part-5/
 
 ## Hardware
 
