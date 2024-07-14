@@ -39,6 +39,8 @@ This repository also contains:
 * 24-pin DIP narrow to wide adaptor.
 * Front panel design.
 * Connector panel design.
+* Alternative connector panel "V2" design (includes a JST SH breakout).
+* JST SH 4-pin breakout board.
 * STL file for a 3D Printed box for both panels.
 * STL file for a 3D Printed tool to help screw in spacers.
 

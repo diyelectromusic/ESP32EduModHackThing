@@ -27,6 +27,8 @@ Additional hardware (optional):
 * Connector Panel - 50x100mm PCB files that can be used as an additional accessories/connectors panel.
 * 3D Printer STL file - 150x100x35mm approx enclosure for a front panel and connector panel.
 * 3D Printer STL file for a low quality tool to help screw in the hex-spacers.
+* Alternative Connector Panel - 50x100mm PCB files for accessories/connectors including a JST SH 4-way header for power and MIDI compatible with my Raspberry Pi Pico Touch Keyboard.
+* JST SH 4-pin breakout board - breakout board for use with the alternative connecor panel.
 
 ![Photo of the ESP32EduModHackThing in its box](images/ESP32EduModHackThingBox.JPG)
 
