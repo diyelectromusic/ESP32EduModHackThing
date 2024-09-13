@@ -12,10 +12,11 @@
 #ifdef DBG_TIMING
 #define DISABLE_DAC
 #warning Using Timing pins on 25 and 26
-#define TIMING_PIN1 25
+//#define TIMING_PIN1 25
 //#define TIMING_PIN1_TOG
 #define TIMING_PIN2 26
 #define TIMING_PIN2_TOG
+#define TIMING_PIN3 25
 #endif
 
 //--------------------------
@@ -287,6 +288,29 @@ void Task1MIDILoop() {
 }
 
 //--------------------------
+//    Some scheduling performed in a periodic sub-task
+//--------------------------
+void Task1SubTaskSetup() {
+  FastAlgSetup (fastalgpins, FAST_ALG_PINS);
+}
+
+void Task1SubTaskLoop() {
+#ifdef TIMING_PIN3
+  digitalWrite(TIMING_PIN3, HIGH);
+#endif
+
+  // Fast Analog IO processed on a fixed loop
+  Task1FastAlgIOLoop();
+
+  // As is Digital IO
+  Task1DigIOLoop();
+
+#ifdef TIMING_PIN3
+  digitalWrite(TIMING_PIN3, LOW);
+#endif
+}
+
+//--------------------------
 //    Setup and Loop
 //--------------------------
 
@@ -297,6 +321,9 @@ void Task1Setup(void)
 #endif
 #ifdef TIMING_PIN2
   pinMode (TIMING_PIN2, OUTPUT);
+#endif
+#ifdef TIMING_PIN3
+  pinMode (TIMING_PIN3, OUTPUT);
 #endif
 
   for (int i=0; i<NUM_DAC_PINS; i++) {
@@ -315,7 +342,6 @@ void Task1Setup(void)
     }
   }
 
-  FastAlgSetup (fastalgpins, FAST_ALG_PINS);
   envSetup();
   Task1TimerSetup();
   MuxSetup();
@@ -323,11 +349,11 @@ void Task1Setup(void)
 }
 
 #define S_MUX (NUM_MUX_POTS-1)
-#define S_DIGIO  (S_MUX+1)
-#define S_ALGIO  (S_DIGIO+1)
+#define S_ALGIO  (S_MUX+1)
 #define S_LAST   (S_ALGIO+1)
-// Not scanning following in the sequence atm - scanning every loop instead
-#define S_FASTIO (S_ALGIO+1)
+// Not scanning following in the sequence atm
+#define S_DIGIO  (S_ALGIO+1)
+#define S_FASTIO (S_DIGIO+1)
 #define S_MIDI   (S_FASTIO+1)
 int taskState;
 int timingtog1;
@@ -346,8 +372,7 @@ void Task1Loop(void)
 #endif
 #endif
 
-  // Fast/Analog inputs and MIDI scanned every time
-  Task1FastAlgIOLoop();
+  // MIDI scanned every time
   Task1MIDILoop();
 
   if (taskState <= S_MUX) {
@@ -364,18 +389,19 @@ void Task1Loop(void)
         break;
     }
   }
+  else if (taskState == S_ALGIO) {
+    Task1AlgIOLoop();
+  }
+/* Not done here - see Task1SubTaskSetup(), etc
   else if (taskState == S_FASTIO) {
     Task1FastAlgIOLoop();
   }
   else if (taskState == S_DIGIO) {
     Task1DigIOLoop();
   }
-  else if (taskState == S_ALGIO) {
-    Task1AlgIOLoop();
-  }
   else if (taskState == S_MIDI) {
     Task1MIDILoop();
-  }
+  }*/
   else {
     // Reset state as something weird going on
     taskState = S_LAST;

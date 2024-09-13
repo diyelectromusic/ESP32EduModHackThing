@@ -38,6 +38,8 @@ void core0Entry (void *pvParameters);
 TaskHandle_t core0Task;
 void core1Entry (void *pvParameters);
 TaskHandle_t core1Task;
+void core1SubTaskEntry (void *pvParameters);
+TaskHandle_t core1SubTask;
 
 void setup () {
 #ifdef S_DEBUG
@@ -46,6 +48,8 @@ void setup () {
   delay(300);
   // NB: Need to start MIDI on Task 1 before PWM on Task 0 as TX is reused as a PWM output...
   xTaskCreatePinnedToCore(core1Entry, "Core 1 Task", 2048, NULL, 1, &core1Task, 1);
+  // Sub task is higher priority than "main" task and used for period functions
+  xTaskCreatePinnedToCore(core1SubTaskEntry, "Core 1 SubTask", 2048, NULL, 2, &core1SubTask, 1);
   delay(300);
   xTaskCreatePinnedToCore(core0Entry, "Core 0 Task", 4096, NULL, 1, &core0Task, 0);
 }
@@ -69,5 +73,21 @@ void core1Entry (void *pvParameters) {
   for (;;) {
     Task1Loop();
     vTaskDelay(1); // Allow FreeRTOS IDLE to maintain watchdog
+  }
+}
+
+void core1SubTaskEntry (void *pvParameters) {
+  Task1SubTaskSetup();
+
+  // Set up for a period task.
+  // Based on example code for xTaskDelayUntil() in ESP32 FreeRTOS IDF reference.
+  TickType_t xLastWakeTime;
+  const TickType_t xFrequency = pdMS_TO_TICKS(1); // 1mS period (1kHz)
+  BaseType_t xWasDelayed;
+  xLastWakeTime = xTaskGetTickCount ();
+
+  for (;;) {
+    xWasDelayed = xTaskDelayUntil( &xLastWakeTime, xFrequency );
+    Task1SubTaskLoop();
   }
 }
