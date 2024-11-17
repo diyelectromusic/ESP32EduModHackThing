@@ -34,6 +34,7 @@ Errata:
 - There is no board space to allow the two power supply electrolytics to bend over the PCB.
 - The footprint for the 2N3904 transistors is too small for easy soldering.
 - Using GPIO 2, 4, 15 as analog input values causes issues - see design notes for details.
+- The panel uses "DELAY" rather than "DECAY" in the lables for the ADSR...
 
 This repository also contains:
 * 24-pin DIP narrow to wide adaptor.

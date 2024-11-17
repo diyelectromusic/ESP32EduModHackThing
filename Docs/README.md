@@ -7,12 +7,13 @@
 
 ## Tutorials
 
-Summary slides:
-* [Ch 1 and 2: Introduction and First Projects](EduModularSynthThingProjects-Ch1-Ch2.pdf)
+Summary project slides:
+* [Introduction, First Projects, Add-ons](EduModularSynthThingProjects-Slides.pdf)
 
 Detailed notes:
 * [Chapter 1: Introduction](EduModularSynthThingProjectBook-Ch1-Introduction.pdf)
 * [Chapter 2: Introductory Projects](EduModularSynthThingProjectBook-Ch2-IntroductoryProjects.pdf)
+* [Chapter 3: Optional Add-ons](EduModularSynthThingProjectBook-Ch3-AddonProjects.pdf)
 
 ## License, Use, Feedback, Contributions
 
