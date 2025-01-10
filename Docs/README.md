@@ -14,6 +14,7 @@ Detailed notes:
 * [Chapter 1: Introduction](EduModularSynthThingProjectBook-Ch1-Introduction.pdf)
 * [Chapter 2: Introductory Projects](EduModularSynthThingProjectBook-Ch2-IntroductoryProjects.pdf)
 * [Chapter 3: Optional Add-ons](EduModularSynthThingProjectBook-Ch3-AddonProjects.pdf)
+* [Chapter 4: Oscilloscope](EduModularSynthThingProjectBook-Ch4-Oscilloscope.pdf)
 
 ## License, Use, Feedback, Contributions
 
