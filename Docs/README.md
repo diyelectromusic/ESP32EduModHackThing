@@ -15,6 +15,7 @@ Detailed notes:
 * [Chapter 2: Introductory Projects](EduModularSynthThingProjectBook-Ch2-IntroductoryProjects.pdf)
 * [Chapter 3: Optional Add-ons](EduModularSynthThingProjectBook-Ch3-AddonProjects.pdf)
 * [Chapter 4: Oscilloscope](EduModularSynthThingProjectBook-Ch4-Oscilloscope.pdf)
+* [Chapter 5: External Passive Circuits](EduModularSynthThingProjectBook-Ch5-ExternalPassiveCircuits.pdf)
 
 ## License, Use, Feedback, Contributions
 
