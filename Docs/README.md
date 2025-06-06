@@ -9,6 +9,7 @@
 
 Summary project slides:
 * [Introduction, First Projects, Add-ons](EduModularSynthThingProjects-Slides.pdf)
+* [Curated Selection of the above as a "workbook"](EduModularSynthThingProjectSelection.pdf)
 
 Detailed notes:
 * [Chapter 1: Introduction](EduModularSynthThingProjectBook-Ch1-Introduction.pdf)
