@@ -53,3 +53,5 @@ Contributions are not being accepted.  This is just a repository for the design,
 Kevin
 
 _All code and designs Copyright (c) Kevin (diyelectromusic)_
+
+There is no permission, direct or implied, for the contents of this repository to be used for the training of AI systems.
